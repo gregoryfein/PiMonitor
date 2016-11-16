@@ -1,0 +1,731 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.ConfigFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/reload"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding_medium"
+                android:background="@color/colorPrimary"
+                android:textColor="@color/white"
+                android:layout_margin="@dimen/padding_medium"
+                android:text="RELOAD CONFIGURATION"/>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/padding_medium"
+                android:layout_marginRight="@dimen/padding_medium"
+                android:background="@color/white"
+                card_view:cardCornerRadius="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/padding_medium"
+                        android:text="Frequencies"
+                        android:textSize="@dimen/text_size_large" />
+
+                    <include layout="@layout/view_divider" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/padding_medium">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:text="CPU"
+                                android:textSize="@dimen/text_size_small" />
+
+                            <TextView
+                                android:id="@+id/freq_arm"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="1"
+                                android:gravity="right"
+                                android:text="3:45:32"
+                                android:textSize="@dimen/text_size_medium" />
+
+                        </LinearLayout>
+
+                        <include layout="@layout/view_divider" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/padding_medium">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:text="SDRAM"
+                                android:textSize="@dimen/text_size_small" />
+
+                            <TextView
+                                android:id="@+id/freq_sdram"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="1"
+                                android:gravity="right"
+                                android:text="3:45:32"
+                                android:textSize="@dimen/text_size_medium" />
+
+                        </LinearLayout>
+
+
+                        <include layout="@layout/view_divider" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/padding_medium">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:text="GPU"
+                                android:textSize="@dimen/text_size_small" />
+
+                            <TextView
+                                android:id="@+id/freq_gpu"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="1"
+                                android:gravity="right"
+                                android:text="3:45:32"
+                                android:textSize="@dimen/text_size_medium" />
+
+                        </LinearLayout>
+
+                        <include layout="@layout/view_divider" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/padding_medium">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:text="Core"
+                                android:textSize="@dimen/text_size_small" />
+
+                            <TextView
+                                android:id="@+id/freq_core"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="1"
+                                android:gravity="right"
+                                android:text="3:45:32"
+                                android:textSize="@dimen/text_size_medium" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/padding_medium"
+                android:layout_marginRight="@dimen/padding_medium"
+                android:layout_marginTop="@dimen/padding_medium"
+                android:background="@color/white"
+                card_view:cardCornerRadius="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/padding_medium"
+                        android:text="RAM Split"
+                        android:textSize="@dimen/text_size_large" />
+
+                    <include layout="@layout/view_divider" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/padding_medium">
+
+                        <View
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:layout_gravity="center_vertical"
+                            android:background="@color/colorPrimary" />
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:text="CPU"
+                            android:paddingLeft="@dimen/padding_small"
+                            android:textSize="@dimen/text_size_small" />
+
+                        <TextView
+                            android:id="@+id/split_cpu"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:text="3:45:32"
+                            android:textSize="@dimen/text_size_medium" />
+
+
+                        <View
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:layout_gravity="center_vertical"
+                            android:background="@color/colorSecondary" />
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:paddingLeft="@dimen/padding_small"
+                            android:text="GPU"
+                            android:gravity="center_vertical"
+                            android:textSize="@dimen/text_size_small" />
+
+                        <TextView
+                            android:id="@+id/split_gpu"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:text="3:45:32"
+                            android:gravity="center_vertical"
+                            android:textSize="@dimen/text_size_medium" />
+
+                    </LinearLayout>
+
+                    <include layout="@layout/view_divider" />
+
+                    <ProgressBar
+                        android:id="@+id/split_bar"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/padding_medium"
+                        android:background="@drawable/border"
+                        android:indeterminate="false"
+                        android:max="100"
+                        android:minHeight="24dp"
+                        android:progress="1" />
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/padding_medium"
+                android:layout_marginRight="@dimen/padding_medium"
+                android:layout_marginTop="@dimen/padding_medium"
+                android:background="@color/white"
+                card_view:cardCornerRadius="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/padding_medium"
+                        android:text="Clocks"
+                        android:textSize="@dimen/text_size_large" />
+
+                    <include layout="@layout/view_divider" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="@dimen/padding_medium">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/padding_small"
+                            android:layout_marginTop="@dimen/padding_small"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:textSize="@dimen/text_size_small"
+                                android:text="Core" />
+
+                            <TextView
+                                android:id="@+id/clock_core"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="left"
+                                android:textSize="@dimen/text_size_medium"
+                                android:text="122Mhz" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:textSize="@dimen/text_size_small"
+                                android:text="HDMI" />
+
+                            <TextView
+                                android:id="@+id/clock_hdmi"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="left"
+                                android:textSize="@dimen/text_size_medium"
+                                android:text="122Mhz" />
+                        </LinearLayout>
+
+                        <include layout="@layout/view_divider" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/padding_small"
+                            android:layout_marginTop="@dimen/padding_small"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:textSize="@dimen/text_size_small"
+                                android:text="EMMC" />
+
+                            <TextView
+                                android:id="@+id/clock_emmc"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="left"
+                                android:textSize="@dimen/text_size_medium"
+                                android:text="122Mhz" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:textSize="@dimen/text_size_small"
+                                android:text="H264" />
+
+                            <TextView
+                                android:id="@+id/clock_h264"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="left"
+                                android:textSize="@dimen/text_size_medium"
+                                android:text="122Mhz" />
+                        </LinearLayout>
+
+                        <include layout="@layout/view_divider" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/padding_small"
+                            android:layout_marginTop="@dimen/padding_small"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:textSize="@dimen/text_size_small"
+                                android:text="ISP" />
+
+                            <TextView
+                                android:id="@+id/clock_isp"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="left"
+                                android:textSize="@dimen/text_size_medium"
+                                android:text="122Mhz" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:textSize="@dimen/text_size_small"
+                                android:text="Pixel" />
+
+                            <TextView
+                                android:id="@+id/clock_pixel"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="left"
+                                android:textSize="@dimen/text_size_medium"
+                                android:text="122Mhz" />
+                        </LinearLayout>
+
+                        <include layout="@layout/view_divider" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/padding_small"
+                            android:layout_marginTop="@dimen/padding_small"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:textSize="@dimen/text_size_small"
+                                android:text="UART" />
+
+                            <TextView
+                                android:id="@+id/clock_uart"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="left"
+                                android:textSize="@dimen/text_size_medium"
+                                android:text="122Mhz" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:textSize="@dimen/text_size_small"
+                                android:text="V3D" />
+
+                            <TextView
+                                android:id="@+id/clock_v3d"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="left"
+                                android:textSize="@dimen/text_size_medium"
+                                android:text="122Mhz" />
+                        </LinearLayout>
+
+                        <include layout="@layout/view_divider" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/padding_small"
+                            android:layout_marginTop="@dimen/padding_small"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:textSize="@dimen/text_size_small"
+                                android:text="VEC" />
+
+                            <TextView
+                                android:id="@+id/clock_vec"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="left"
+                                android:textSize="@dimen/text_size_medium"
+                                android:text="122Mhz" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:textSize="@dimen/text_size_small"
+                                android:text="PWM" />
+
+                            <TextView
+                                android:id="@+id/clock_pwm"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="left"
+                                android:textSize="@dimen/text_size_medium"
+                                android:text="122Mhz" />
+                        </LinearLayout>
+
+                        <include layout="@layout/view_divider" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/padding_small"
+                            android:layout_marginTop="@dimen/padding_small"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:textSize="@dimen/text_size_small"
+                                android:text="ARM" />
+
+                            <TextView
+
+                                android:id="@+id/clock_arm"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="left"
+                                android:textSize="@dimen/text_size_medium"
+                                android:text="122Mhz" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:textSize="@dimen/text_size_small"
+                                android:text="DPI" />
+
+                            <TextView
+                                android:id="@+id/clock_dpi"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="left"
+                                android:textSize="@dimen/text_size_medium"
+                                android:text="122Mhz" />
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/padding_medium"
+                android:layout_marginRight="@dimen/padding_medium"
+                android:layout_marginTop="@dimen/padding_medium"
+                android:background="@color/white"
+                card_view:cardCornerRadius="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:padding="@dimen/padding_medium"
+                            android:text="Overscan"
+                            android:textSize="@dimen/text_size_large" />
+
+                        <TextView
+                            android:id="@+id/overscan_scale"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/padding_medium"
+                            android:text="Scale: 4"
+                            android:textSize="@dimen/text_size_medium" />
+                    </LinearLayout>
+
+                    <include layout="@layout/view_divider" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="@dimen/padding_medium">
+
+                        <TextView
+                            android:id="@+id/overscan_top"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginBottom="@dimen/padding_small"
+                            android:gravity="center"
+                            android:text="Top"
+                            android:textSize="@dimen/text_size_medium" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/overscan_left"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="Left"
+                                android:textSize="@dimen/text_size_medium" />
+
+                            <ImageView
+                                android:layout_width="240dp"
+                                android:layout_height="135dp"
+                                android:background="@drawable/border"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/screen_bg" />
+
+                            <TextView
+                                android:id="@+id/overscan_right"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="Right"
+                                android:textSize="@dimen/text_size_medium" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/overscan_bottom"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginTop="@dimen/padding_small"
+                            android:gravity="center"
+                            android:text="Bottom"
+                            android:textSize="@dimen/text_size_medium" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="64dp" />
+        </LinearLayout>
+
+        <!--{
+       "config":{
+          "force_pwm_open":"1",
+          "arm_freq":"1350",
+          "overscan_left":"48",
+          "overscan_scale":"1",
+          "sdram_freq":"575",
+          "hdmi_force_cec_address":"65535",
+          "lcd_framerate":"60",
+          "framebuffer_swap":"1",
+          "config_hdmi_boost":"5",
+          "over_voltage_sdram_p":"6",
+          "over_voltage_avs":"0x186a0",
+          "force_eeprom_read":"1",
+          "over_voltage_sdram_i":"4",
+          "disable_commandline_tags":"2",
+          "program_serial_random":"1",
+          "disable_l2cache":"1",
+          "h264_freq":"333",
+          "over_voltage_sdram_c":"4",
+          "desired_osc_freq":"0x36ee80",
+          "temp_limit":"85",
+          "framebuffer_ignore_alpha":"1",
+          "v3d_freq":"500",
+          "over_voltage":"6",
+          "overscan_right":"48",
+          "overscan_bottom":"48",
+          "gpu_freq":"575",
+          "core_freq":"500",
+          "sdram_schmoo":"0x2000020",
+          "pause_burst_frames":"1",
+          "hdmi_drive":"2",
+          "overscan_top":"48",
+          "init_uart_clock":"0x2dc6c00",
+          "audio_pwm_mode":"1"
+       },
+       "split":{
+          "gpu":"256M",
+          "cpu":"752M"
+       },
+       "clock":{
+          "core":"500000000",
+          "hdmi":"163683000",
+          "emmc":"250000000",
+          "h264":"333334000",
+          "isp":"500000000",
+          "pixel":"148500000",
+          "uart":"47999000",
+          "v3d":"500000000",
+          "vec":"0",
+          "pwm":"0",
+          "arm":"1350000000",
+          "dpi":"0"
+       }
+    }
+    -->
+    </ScrollView>
+
+</RelativeLayout>
