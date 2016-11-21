@@ -18,7 +18,6 @@ public class ConfigFragment extends BaseFragment {
 
 
     //region Variables
-    private MainActivity mParent;
     private PiConfig mConfig;
 
     private View mRootView;

@@ -60,6 +60,7 @@ public class MainActivity extends AppCompatActivity {
     private SectionsPagerAdapter mSectionsPagerAdapter;
     private StatFragment mStatFragment;
     private ConfigFragment mConfigFragment;
+    private AboutFragment mAboutFragment;
     private TabLayout mTabLayout;
 
     private OkHttpClient mHttpClient;
@@ -222,21 +223,26 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public Fragment getItem(int position) {
-            if(position == 0) {
-                if(mStatFragment == null)
-                    mStatFragment = StatFragment.newInstance(MainActivity.this);
-                return mStatFragment;
-            }
-            else {
-                if(mConfigFragment == null)
-                    mConfigFragment = ConfigFragment.newInstance(MainActivity.this);
-                return mConfigFragment;
+            switch(position) {
+                default:
+                case 0:
+                    if(mStatFragment == null)
+                        mStatFragment = StatFragment.newInstance(MainActivity.this);
+                    return mStatFragment;
+                case 1:
+                    if(mConfigFragment == null)
+                        mConfigFragment = ConfigFragment.newInstance(MainActivity.this);
+                    return mConfigFragment;
+                case 2:
+                    if(mAboutFragment == null)
+                        mAboutFragment = AboutFragment.newInstance(MainActivity.this);
+                    return mAboutFragment;
             }
         }
 
         @Override
         public int getCount() {
-            return 2;
+            return 3;
         }
 
         @Override
@@ -247,6 +253,8 @@ public class MainActivity extends AppCompatActivity {
                     return "Stats";
                 case 1:
                     return "Config";
+                case 2:
+                    return "About";
             }
         }
     }
@@ -316,7 +324,9 @@ public class MainActivity extends AppCompatActivity {
     private void endService() {
         mContinueGettingStats = false;
         mServiceHandler.removeCallbacks(mServiceRunnable);
-        mTimerHandle.removeCallbacks(mTimerRunnable);
+
+        if(mTimerHandle != null)
+            mTimerHandle.removeCallbacks(mTimerRunnable);
     }
 
     private Runnable mConfigRunnable = new Runnable() {

@@ -6,4 +6,36 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="about_header">PiMonitor</string>
+    <string name="about_body">PiMonitor is a utility to monitor your Pi over a local network using a Python server script running on your Pi.  This is an open-source project, so all contributions and feedback are welcome!</string>
+    <string name="setup_header">How To Setup</string>
+    <string name="setup_body">
+        You have to download the three Python files located in the \"server\" folder here: https://github.com/gregoryfein/PiMonitor/server
+        \n
+        \n
+        Move all three to a destination folder on your Pi via FTP. Afterwards, SSH into your Pi and type the following:
+        \n
+        \n
+        This will show your network configuration. Assuming you\'re using WiFi, input the IP address on the \"wlan0\" into the PiMonitor application on your phone. Do this by tapping the pencil on the bottom of the page and putting in the IP. The default port of the script is 8888, so don\'t change that unless you actually change the Python script.
+        \n
+        \"sudo ifconfig\"
+        \n
+        \n
+        This will open the built-in scheduler for Linux
+        \n
+        \"sudo crontab -e\"
+        \n
+        \n
+        At the bottom of the opened file, add the following line:
+        \n
+        \"@reboot python /path/to/server/script/status_http.py&amp;\"
+        \n
+        \n
+        Save and exit from crontab.
+        \n
+        \"sudo reboot -p # this reboot the system.\"
+    </string>
+    <string name="github_header">GitHub Info</string>
+    <string name="github_body">As an open-source project, we welcome all enhancements, PRs, or requests.  You can go to our page by tapping the link below and go from there!</string>
 </resources>

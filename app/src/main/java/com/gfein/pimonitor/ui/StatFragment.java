@@ -17,7 +17,6 @@ import com.gfein.pimonitor.model.stat.Voltage;
 public class StatFragment extends BaseFragment {
 
     //region Variables
-    private MainActivity mParent;
 
     private View mRootView;
     private CPUViewController mCPU1, mCPU2, mCPU3, mCPU4;
