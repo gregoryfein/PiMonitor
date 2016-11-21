@@ -129,6 +129,25 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
+
+        mTimerHandle = new Handler();
+        mTimerRunnable = new Runnable() {
+            @Override
+            public void run() {
+                mRunningSeconds += 1;
+                String text;
+                if (mRunningSeconds < 10)
+                    text = "0:0" + mRunningSeconds;
+                else if (mRunningSeconds < 60)
+                    text = "0:" + mRunningSeconds;
+                else
+                    text = (mRunningSeconds / 60) + ":" + mRunningSeconds % 60;
+                mLastUpdate.setText(text + " ago");
+                mTimerHandle.postDelayed(this, 1000);
+            }
+        };
+
+
         mHttpClient = new OkHttpClient.Builder()
                 .connectTimeout(5, TimeUnit.SECONDS)
                 .writeTimeout(5, TimeUnit.SECONDS)
@@ -144,6 +163,9 @@ public class MainActivity extends AppCompatActivity {
     public void onPause() {
         super.onPause();
         mHttpClient = null;
+        mTimerHandle.removeCallbacks(mTimerRunnable);
+        mTimerRunnable = null;
+        mTimerHandle = null;
         endService();
     }
 
@@ -231,23 +253,8 @@ public class MainActivity extends AppCompatActivity {
     //endregion
 
     //region Update
-    private Handler mTimerHandle = new Handler();
-
-    private Runnable mTimerRunnable = new Runnable() {
-        @Override
-        public void run() {
-            mRunningSeconds += 1;
-            String text;
-            if (mRunningSeconds < 10)
-                text = "0:0" + mRunningSeconds;
-            else if (mRunningSeconds < 60)
-                text = "0:" + mRunningSeconds;
-            else
-                text = (mRunningSeconds / 60) + ":" + mRunningSeconds % 60;
-            mLastUpdate.setText(text + " ago");
-            mTimerHandle.postDelayed(this, 1000);
-        }
-    };
+    private Handler mTimerHandle;
+    private Runnable mTimerRunnable;
 
     private void resetTimer() {
         mRunningSeconds = 0;
