@@ -11,22 +11,22 @@ Next, you have to download the three Python files located in the "server" folder
 
 Move all three to a destination folder on your Pi via FTP.  Afterwards, SSH into your Pi and type the following:
 
-###This will show your network configuration.  Assuming you're using WiFi, input the IP address on the "wlan0" into the PiMonitor application on your phone.  Do this by tapping the pencil on the bottom of the page and putting in the IP.  The default port of the script is 8888, so don't change that unless you actually change the Python script.
+#### This will show your network configuration.  Assuming you're using WiFi, input the IP address on the "wlan0" into the PiMonitor application on your phone.  Do this by tapping the pencil on the bottom of the page and putting in the IP.  The default port of the script is 8888, so don't change that unless you actually change the Python script.
 ```
 sudo ifconfig 
 ```
 
-### This will open the built-in scheduler for Linus
+#### This will open the built-in scheduler for Linus
 ```
 sudo crontab -e 
 ```
 
-###At the bottom of the opened file, add the following line:
+#### At the bottom of the opened file, add the following line:
 ```
 @reboot python /path/to/server/script/status_http.py&
 ```
 
-###Save and exit from crontab
+#### Save and exit from crontab
 ```
 sudo reboot -p # this reboot the system.
 ```
